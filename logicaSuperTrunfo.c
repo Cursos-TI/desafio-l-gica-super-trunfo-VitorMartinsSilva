@@ -92,53 +92,53 @@ int main() {
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
         if (populacao1 > populacao2) {
-         printf("Cidade 1 tem maior população.\n");
+         printf("Cidade 1 é vencedora pois tem maior população.\n");
 
      }  else {
-         printf("Cidade 2 tem maior população.\n");
+         printf("Cidade 2 é vencedora pois tem maior população.\n");
 
      }
 
         if (area1 > area2) {
-         printf("Cidade 1 tem maior area.\n");
+         printf("Cidade 1 é vencedora pois tem maior area.\n");
 
      }  else {
-         printf("Cidade 2 tem maior area.\n");
+         printf("Cidade 2 é vencedora pois tem maior area.\n");
 
      }
         if (pib1 > pib2) {
-         printf("Cidade 1 tem maior PIB.\n");
+         printf("Cidade 1 é vencedora pois tem maior PIB.\n");
 
      }  else {
-         printf("Cidade 2 tem maior PIB.\n");
+         printf("Cidade 2 é vencedora pois tem maior PIB.\n");
      }
 
         if (npt1 > npt2) {
-         printf("Cidade 1 tem maior número de pontos turisticos.\n");
+         printf("Cidade 1 é vencedora pois tem maior número de pontos turisticos.\n");
 
      }  else {
-         printf("Cidade 2 tem maior número de pontos turisticos.\n");
+         printf("Cidade 2 é vencedora pois tem maior número de pontos turisticos.\n");
      }
 
         if (densidade1 > densidade2) {
-        printf("Cidade 1 tem maior densidade populacional.\n");
+        printf("Cidade 1 é vencedora pois tem menor densidade populacional.\n");
         
     }   else {
-        printf ("Cidade 2 tem maior densidade populacional.\n");
+        printf ("Cidade 2 é vencedora pois tem menor densidade populacional.\n");
     }
 
         if (ppc1 > ppc2) {
-        printf("Cidade 1 tem maior PIB per Capta.\n");
+        printf("Cidade 1 é vencedora pois tem maior PIB per Capta.\n");
     }
         else {
-        printf("Cidade 2 tem maior PIB per CAPTA\n");
+        printf("Cidade 2 é vencedora pois tem maior PIB per CAPTA\n");
     }
 
         if (superpoder1 > superpoder2) {
-        printf("Cidade 1 tem o maior super poder.\n");
+        printf("Cidade 1 é vencedora pois tem o maior super poder.\n");
     }    
         else {
-            printf("Cidade 2 tem o maior super poder.\n");
+            printf("Cidade 2 é vencedora pois tem o maior super poder.\n");
     }
     
     // Exibição dos Resultados:
