@@ -6,8 +6,24 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-        
+    
+    // Criação do menu inicial:
+    int opcao; 
+
+    printf("Super Trunfo - Menu principal\n");
+    printf ("1 - Iniciar Jogo\n");
+    printf ("2 - Regras do Jogo\n");
+    printf ("3 - Sair do Jogo\n");
+    printf ("Escolha uma opção\n");
+    scanf("%d", &opcao);
+
+    switch (opcao)
+    {
+    case 1: 
+
+    printf ("Iniciando Jogo...\n");
+
+    // Definição das variáveis para armazenar as propriedades das cidades   
     //Dados da carta 1
 
     char codigo1[4];
@@ -31,7 +47,7 @@ int main() {
     float densidade2;
     float ppc2;
     float superpoder2;
-    
+   
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
     // utilizando a função scanf para capturar as entradas.
@@ -85,13 +101,13 @@ int main() {
     ppc2  = pib2 / populacao2;
 
     superpoder1 = populacao1+area1+pib1+npt1+densidade1+ppc1;
-    superpoder2 = populacao2+area2+pib2+npt2+densidade2+ppc2;
-
-    // Comparação de Cartas:
+    superpoder2 = populacao2+area2+pib2+npt2+densidade2+ppc2;    
+    
+    // Comparação de Cartas e exibição do resultado:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-        if (populacao1 > populacao2) {
+    
+    if (populacao1 > populacao2) {
          printf("Cidade 1 é vencedora pois tem maior população.\n");
 
      }  else {
@@ -140,13 +156,31 @@ int main() {
         else {
             printf("Cidade 2 é vencedora pois tem o maior super poder.\n");
     }
-    
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    break;
 
-    return 0;
+    // Exibição das Regras
+
+    case 2:
+
+    printf ("Regra 1: O jogador escolhe o atributo da carta a ser comparado\n");
+    printf ("Regra 2: O atributo maior vence, exceto no atributo Densidade Populacional\n");
+
+    break;
+
+    // Sair do jogo
+
+    case 3:
+
+    printf ("Saindo do Jogo...\n");
+
+    default:
+
+    printf ("Opção Inválida\n");
+        
+        break;
+    }
+
+
+       return 0;
 }
