@@ -8,16 +8,17 @@
 int main() {
     
     // Criação do menu inicial:
-    int opcao; 
+    int opcaoMenu; 
+    int opcaoCarta;
 
     printf("Super Trunfo - Menu principal\n");
     printf ("1 - Iniciar Jogo\n");
     printf ("2 - Regras do Jogo\n");
     printf ("3 - Sair do Jogo\n");
     printf ("Escolha uma opção\n");
-    scanf("%d", &opcao);
+    scanf("%d", &opcaoMenu);
 
-    switch (opcao)
+    switch (opcaoMenu)
     {
     case 1: 
 
@@ -107,6 +108,21 @@ int main() {
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
     
+    //Menu da Escolha do Atributo
+    printf("Escolha o atributo a ser comparado\n");
+    printf ("1 - Populaçao\n");
+    printf ("2 - Área\n");
+    printf ("3 - PIB\n");
+    printf ("4 - Número de Pontos Túristicos\n");
+    printf ("5 - Densidade Populacional\n");
+    printf ("6 - PIB per Capta\n");
+    printf ("7 - Super Poder\n:");
+    scanf("%d", &opcaoCarta);
+
+    switch (opcaoCarta)
+    {
+    case 1:
+
     if (populacao1 > populacao2) {
          printf("Cidade 1 é vencedora pois tem maior população.\n");
 
@@ -114,43 +130,68 @@ int main() {
          printf("Cidade 2 é vencedora pois tem maior população.\n");
 
      }
+        break;
+    
+    case 2:
 
-        if (area1 > area2) {
+    if (area1 > area2) {
          printf("Cidade 1 é vencedora pois tem maior area.\n");
 
      }  else {
          printf("Cidade 2 é vencedora pois tem maior area.\n");
 
      }
-        if (pib1 > pib2) {
+     
+     break;
+
+    case 3:
+
+    if (pib1 > pib2) {
          printf("Cidade 1 é vencedora pois tem maior PIB.\n");
 
      }  else {
          printf("Cidade 2 é vencedora pois tem maior PIB.\n");
+
      }
 
-        if (npt1 > npt2) {
+    break;
+
+    case 4:
+
+    if (npt1 > npt2) {
          printf("Cidade 1 é vencedora pois tem maior número de pontos turisticos.\n");
 
      }  else {
          printf("Cidade 2 é vencedora pois tem maior número de pontos turisticos.\n");
      }
 
-        if (densidade1 > densidade2) {
+    break;
+
+    case 5:
+
+     if (densidade1 > densidade2) {
         printf("Cidade 1 é vencedora pois tem menor densidade populacional.\n");
         
     }   else {
         printf ("Cidade 2 é vencedora pois tem menor densidade populacional.\n");
     }
 
-        if (ppc1 > ppc2) {
+    break;
+
+    case 6:
+
+     if (ppc1 > ppc2) {
         printf("Cidade 1 é vencedora pois tem maior PIB per Capta.\n");
     }
         else {
         printf("Cidade 2 é vencedora pois tem maior PIB per CAPTA\n");
     }
 
-        if (superpoder1 > superpoder2) {
+    break;
+
+    case 7:
+
+      if (superpoder1 > superpoder2) {
         printf("Cidade 1 é vencedora pois tem o maior super poder.\n");
     }    
         else {
@@ -159,13 +200,23 @@ int main() {
 
     break;
 
-    // Exibição das Regras
+    default:
+    printf ("Opção Inválida\n");
+  
+    }
+// Jogo finalizado, ecerrar programa.
+
+return 0;
+    
+       
+     // Exibição das Regras
 
     case 2:
 
     printf ("Regra 1: O jogador escolhe o atributo da carta a ser comparado\n");
     printf ("Regra 2: O atributo maior vence, exceto no atributo Densidade Populacional\n");
-
+    printf ("Regra 3: O Super Poder é a soma de todos os atributos.\n");
+    
     break;
 
     // Sair do jogo
@@ -174,11 +225,14 @@ int main() {
 
     printf ("Saindo do Jogo...\n");
 
+    break;
+
     default:
 
-    printf ("Opção Inválida\n");
+    printf ("Opção Inválida.\n");
         
         break;
+      
     }
 
 
