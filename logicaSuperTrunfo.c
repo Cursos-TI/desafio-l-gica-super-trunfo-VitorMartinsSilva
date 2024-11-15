@@ -5,12 +5,12 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
 // Siga os comentários para implementar cada parte do desafio.
 
-int main() {
+int main() 
+{
     
     // Criação do menu inicial:
     int opcaoMenu; 
-    int opcaoCarta;
-
+    
     printf("Super Trunfo - Menu principal\n");
     printf ("1 - Iniciar Jogo\n");
     printf ("2 - Regras do Jogo\n");
@@ -109,7 +109,12 @@ int main() {
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
     
     //Menu da Escolha do Atributo
-    printf("Escolha o atributo a ser comparado\n");
+int opcaoCarta1;
+int opcaoCarta2;
+int vitoriaJogador = 0;
+int vitoriaComputador = 0;
+
+    printf("Escolha o primeiro atributo a ser comparado\n");
     printf ("1 - Populaçao\n");
     printf ("2 - Área\n");
     printf ("3 - PIB\n");
@@ -117,93 +122,105 @@ int main() {
     printf ("5 - Densidade Populacional\n");
     printf ("6 - PIB per Capta\n");
     printf ("7 - Super Poder\n:");
-    scanf("%d", &opcaoCarta);
+    scanf("%d", &opcaoCarta1);
 
-    switch (opcaoCarta)
+    switch (opcaoCarta1)
     {
-    case 1:
-
-    if (populacao1 > populacao2) {
-         printf("Cidade 1 é vencedora pois tem maior população.\n");
-
-     }  else {
-         printf("Cidade 2 é vencedora pois tem maior população.\n");
-
-     }
-        break;
+        case 1:
+    (populacao1>populacao2) ? vitoriaJogador++: (populacao2>populacao1) ? vitoriaComputador++: 0;
+    break;
     
-    case 2:
-
-    if (area1 > area2) {
-         printf("Cidade 1 é vencedora pois tem maior area.\n");
-
-     }  else {
-         printf("Cidade 2 é vencedora pois tem maior area.\n");
-
-     }
-     
-     break;
-
-    case 3:
-
-    if (pib1 > pib2) {
-         printf("Cidade 1 é vencedora pois tem maior PIB.\n");
-
-     }  else {
-         printf("Cidade 2 é vencedora pois tem maior PIB.\n");
-
-     }
-
+        case 2:
+    (area1>area2) ? vitoriaJogador++: (area2>area1) ? vitoriaComputador++: 0;
     break;
-
-    case 4:
-
-    if (npt1 > npt2) {
-         printf("Cidade 1 é vencedora pois tem maior número de pontos turisticos.\n");
-
-     }  else {
-         printf("Cidade 2 é vencedora pois tem maior número de pontos turisticos.\n");
-     }
-
-    break;
-
-    case 5:
-
-     if (densidade1 > densidade2) {
-        printf("Cidade 1 é vencedora pois tem menor densidade populacional.\n");
-        
-    }   else {
-        printf ("Cidade 2 é vencedora pois tem menor densidade populacional.\n");
-    }
-
-    break;
-
-    case 6:
-
-     if (ppc1 > ppc2) {
-        printf("Cidade 1 é vencedora pois tem maior PIB per Capta.\n");
-    }
-        else {
-        printf("Cidade 2 é vencedora pois tem maior PIB per CAPTA\n");
-    }
-
-    break;
-
-    case 7:
-
-      if (superpoder1 > superpoder2) {
-        printf("Cidade 1 é vencedora pois tem o maior super poder.\n");
-    }    
-        else {
-            printf("Cidade 2 é vencedora pois tem o maior super poder.\n");
-    }
-
-    break;
-
-    default:
-    printf ("Opção Inválida\n");
   
+        case 3:
+    (pib1>pib2) ? vitoriaJogador++: (pib2>pib1) ? vitoriaComputador++: 0;
+    break;
+
+        case 4:
+    (npt1>npt2) ? vitoriaJogador++: (npt2>npt1) ? vitoriaComputador++: 0;
+    break;
+
+        case 5:
+    (densidade1>densidade2) ? vitoriaJogador++: (densidade2>densidade1) ? vitoriaComputador++: 0;
+    break;
+
+        case 6:
+    (ppc1>ppc2) ? vitoriaJogador++: (ppc2>ppc1) ? vitoriaComputador++: 0;
+    break;
+
+        case 7:
+    (superpoder1>superpoder2) ? vitoriaJogador++: (superpoder2>superpoder1) ? vitoriaComputador++: 0;
+    break;
+
+        default:
+    printf("Opção inválida!\n");
+    break;
+
     }
+
+    printf("Escolha o segundo atributo a ser comparado\n");
+    printf ("1 - Populaçao\n");
+    printf ("2 - Área\n");
+    printf ("3 - PIB\n");
+    printf ("4 - Número de Pontos Túristicos\n");
+    printf ("5 - Densidade Populacional\n");
+    printf ("6 - PIB per Capta\n");
+    printf ("7 - Super Poder\n:");
+    scanf("%d", &opcaoCarta2);
+
+    switch (opcaoCarta2)
+    {
+
+        case 1:
+    (populacao1>populacao2) ? vitoriaJogador++: (populacao2>populacao1) ? vitoriaComputador++: 0;
+    break;
+    
+        case 2:
+    (area1>area2) ? vitoriaJogador++: (area2>area1) ? vitoriaComputador++: 0;
+    break;
+  
+        case 3:
+    (pib1>pib2) ? vitoriaJogador++: (pib2>pib1) ? vitoriaComputador++: 0;
+    break;
+
+        case 4:
+    (npt1>npt2) ? vitoriaJogador++: (npt2>npt1) ? vitoriaComputador++: 0;
+    break;
+
+        case 5:
+    (densidade1>densidade2) ? vitoriaJogador++: (densidade2>densidade1) ? vitoriaComputador++: 0;
+    break;
+
+        case 6:
+    (ppc1>ppc2) ? vitoriaJogador++: (ppc2>ppc1) ? vitoriaComputador++: 0;
+    break;
+
+        case 7:
+    (superpoder1>superpoder2) ? vitoriaJogador++: (superpoder2>superpoder1) ? vitoriaComputador++: 0;
+    break;
+
+        default:
+    printf("Opção inválida!\n");
+    break;
+
+    }
+
+if (vitoriaJogador>vitoriaComputador)
+
+{
+    printf("Parabéns você venceu!");
+}
+   else if (vitoriaComputador>vitoriaJogador)
+   {
+    printf ("Que pena, você perdeu");
+   }
+   else
+   {
+   printf ("Empate");
+   } 
+
 // Jogo finalizado, ecerrar programa.
 
 return 0;
@@ -231,10 +248,8 @@ return 0;
 
     printf ("Opção Inválida.\n");
         
-        break;
-      
+    break;
     }
 
-
-       return 0;
+    return 0;
 }
