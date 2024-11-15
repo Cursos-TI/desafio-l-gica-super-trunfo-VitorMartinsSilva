@@ -190,7 +190,7 @@ int vitoriaComputador = 0;
     break;
 
         case 5:
-    (densidade1>densidade2) ? vitoriaJogador++: (densidade2>densidade1) ? vitoriaComputador++: 0;
+    (densidade1<densidade2) ? vitoriaJogador++: (densidade2<densidade1) ? vitoriaComputador++: 0;
     break;
 
         case 6:
